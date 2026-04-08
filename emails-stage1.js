@@ -1,136 +1,405 @@
-/* ======================================================
-   STAGE 1 — Masterclass Invite Sequences (12 emails)
-   Speaking & Authorship Collection
-   4 funnels x 3 emails: 7 Figure Creator, Course Pro, Speak and Inspire, Stage Effect
-   ====================================================== */
-
-window.EMAIL_DATA = {};
+// ─────────────────────────────────────────────────────────
+//  Stage 1: Masterclass Invite Sequences (12 emails, 4 funnels)
+//  Speaking & Authorship Pathway — Complete rewrite Apr 2026
+// ─────────────────────────────────────────────────────────
 
 Object.assign(window.EMAIL_DATA, {
 
-// ================================================================
-// 7 FIGURE CREATOR (John Lee / Vishen) — #f97316
-// ================================================================
-
-'mc-7fc-1': {
-    subject: 'He went from 0 to 6 million followers in 3.5 years',
-    preheader: 'The self-made millionaire who cracked the creator economy code. Here\'s his free masterclass.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1818x1022/9cfa71b698/trainer_john-lee_d.jpg',
-    schwartz: 'Problem-Aware', cialdini: 'Authority + Reciprocity',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/creator/masterclass',
-    body: 'Hey there,\n\nLet me tell you about someone who figured out what most people get wrong about social media.\n\nHis name is John Lee. And by 27, he was already a self-made millionaire.\n\nBut here\'s what makes his story different from every other "I got rich online" narrative you\'ve heard:\n\n**John started with zero followers.** Zero audience. Zero viral moments. Zero lucky breaks.\n\n---\n\nIn just 3.5 years, he grew from 0 to over 6 million followers.\n\nNot by gaming algorithms. Not by buying followers. Not by posting random content and hoping something sticks.\n\n**He built a system.** A repeatable, teachable system that turns anyone\'s passion into a 7-figure content business.\n\nToday, he mentors CEOs, celebrities, and athletes. He has shared stages with Tony Robbins and Bill Clinton. He has been featured in Forbes, Fortune, The Wall Street Journal, and the BBC.\n\nAnd now? He is teaching his entire system in a free masterclass.\n\n---\n\n**Here\'s what you\'ll learn:**\n\n--> **Create viral content** that skyrockets your social media growth -- learn the art of crafting engaging, high-impact content that captures attention and drives massive engagement\n--> **Monetize your platforms effortlessly** -- proven strategies to turn your social media presence into a revenue-generating engine aligned with your passion\n--> **Build a personal brand that magnetizes opportunities** -- establish yourself as a trusted authority in your niche\n--> **Unlock the 7-figure growth blueprint** -- John\'s exact strategy to scale your influence, amplify your message, and create lasting impact\n\nThis is not theory. This is the exact playbook that took John from unknown to 6 million followers and 7-figure income.\n\n---\n\n**189,296 people** have already attended this masterclass.\n\nIf you have ever thought about turning your expertise, your passion, or your message into a real online business -- this is the masterclass to watch.\n\n**[Watch the Free 7 Figure Creator Masterclass \u2192](https://www.mindvalley.com/creator/masterclass)**\n\nWith love and abundance,\n\n[Signature]\n\nP.S. John was awarded "Man of the Year" in 2017 by Global Women Magazine and has a global network of over 6 million followers. The man knows how to build an audience. **[Learn his system for free \u2192](https://www.mindvalley.com/creator/masterclass)**'
-},
-
-'mc-7fc-2': {
-    subject: 'The 7-figure content creator blueprint (free masterclass)',
-    preheader: 'From content creation to cracking algorithms to building sales funnels. All in 32 minutes.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1818x1022/9cfa71b698/trainer_john-lee_d.jpg',
-    schwartz: 'Solution-Aware', cialdini: 'Authority',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/creator/masterclass',
-    body: 'Hey there,\n\nLet me ask you something honest.\n\nYou probably already know that the creator economy is booming. You have seen the numbers. You have watched other people build massive audiences and turn their knowledge into income.\n\n**So why hasn\'t it happened for you yet?**\n\nIt is not because you lack talent. It is not because you do not have something valuable to share. And it is definitely not because the window has closed.\n\n---\n\n**It is because nobody showed you the system.**\n\nPosting content without a system is like driving without a map. You might get lucky and end up somewhere interesting. But more likely, you will burn fuel going in circles.\n\nJohn Lee cracked this code. And in this free 32-minute masterclass hosted by Vishen, he breaks down the entire blueprint.\n\n---\n\n**Here is exactly what the masterclass covers:**\n\n--> **The Viral Content Formula** -- why some posts explode while others die in silence, and the specific patterns that trigger the algorithm to amplify your content\n--> **The Monetization Engine** -- how to go from "I have followers" to "I have income streams" without being salesy or inauthentic\n--> **The Personal Brand Architecture** -- the framework for positioning yourself as the go-to authority in any niche, even if the space feels crowded\n--> **The Growth Flywheel** -- John\'s exact system for consistent social media success that compounds over time instead of burning you out\n\nThis masterclass has it all -- from mastering content creation to cracking social media algorithms to building sales funnels from top to bottom.\n\n---\n\n**The numbers speak for themselves:**\n\n--> 189,296 masterclass participants\n--> 23,421 stories shared on Mindvalley\n--> 6 million+ followers built using this exact system\n--> Featured in Forbes, Fortune, Wall Street Journal, BBC\n\nIn 32 minutes, you will have more clarity on building a content business than most people get in months of trial and error.\n\n**[Watch the Free Masterclass Now \u2192](https://www.mindvalley.com/creator/masterclass)**\n\nTo your creator journey,\n\n[Signature]\n\nP.S. Vishen, founder of Mindvalley and a NY Times bestselling author, hosts this masterclass. His expertise in learning design means he draws out the most actionable insights from John -- giving you a masterclass that is pure signal, zero fluff. **[Watch it free \u2192](https://www.mindvalley.com/creator/masterclass)**'
-},
-
-'mc-7fc-3': {
-    subject: 'Your free access to the 7 Figure Creator Masterclass expires today',
-    preheader: 'Last chance to learn John Lee\'s system for turning passion into 7-figure income.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1818x1022/9cfa71b698/trainer_john-lee_d.jpg',
-    schwartz: 'Most-Aware', cialdini: 'Scarcity + Social Proof',
-    cta: 'Watch Before It Ends \u2192', url: 'https://www.mindvalley.com/creator/masterclass',
-    body: 'Your free access to John Lee\'s 7 Figure Creator Masterclass expires today.\n\n**[Click here to watch before it ends \u2192](https://www.mindvalley.com/creator/masterclass)**\n\n---\n\nLet me share something that might shift your perspective.\n\nThe creator economy is now worth over $100 billion. And it is growing every single year. But here is the part most people miss:\n\n**The gap between "content creator" and "7-figure creator" is not talent. It is a system.**\n\nJohn Lee proved this. He went from zero followers to 6 million in 3.5 years -- not because he was more creative or more charismatic than everyone else. Because he understood the mechanics.\n\n---\n\nThink about where you are right now:\n\n--> You have expertise that people would pay for\n--> You have a message that deserves an audience\n--> You have seen others with LESS knowledge build thriving businesses online\n\n**The only difference between you and them? A system.**\n\n---\n\n**In this masterclass, you will learn:**\n\n--> **Create viral content** -- the patterns that trigger algorithmic amplification\n--> **Monetize authentically** -- turn followers into sustainable revenue without being salesy\n--> **Build a magnetic personal brand** -- position yourself as the authority in your niche\n--> **Scale with a flywheel** -- consistent growth that compounds instead of burning you out\n\n---\n\n**189,296 people have watched this masterclass.** 23,421 have shared their stories on Mindvalley. The reviews are overwhelmingly positive -- not because of hype, but because John gives you an actual, actionable system you can implement immediately.\n\nThis is your last chance to access it for free.\n\n**[Watch the Free Masterclass Before It Ends \u2192](https://www.mindvalley.com/creator/masterclass)**\n\nRooting for your success,\n\n[Signature]\n\nP.S. A year from now, you will wish you had started today. The masterclass is 32 minutes. The cost is free. The potential upside is a 7-figure content business built around your passion. **[Watch now before access expires tonight \u2192](https://www.mindvalley.com/creator/masterclass)**'
-},
-
-// ================================================================
-// COURSE PRO (Jimmy Naraine & Vishen) — #ef4444
-// ================================================================
-
-'mc-cp-1': {
-    subject: 'He left Goldman Sachs to create courses (and never looked back)',
-    preheader: 'How one man turned his expertise into 350,000 students and a 007 lifestyle.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/f2007863a8/cp_lp_signup_top_d.jpg',
-    schwartz: 'Problem-Aware', cialdini: 'Authority + Reciprocity',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/coursepro/masterclass',
-    body: 'Hey there,\n\nJimmy Naraine had the kind of job most people dream about.\n\nGoldman Sachs. The prestige. The salary. The career trajectory that makes your parents proud at dinner parties.\n\nBut something was eating at him.\n\n**He had knowledge inside him that was dying to get out.** Ideas, expertise, frameworks that could help thousands of people -- but instead, he was spending his days making spreadsheets for a bank.\n\n---\n\nSo he did something most people would call crazy.\n\nHe left Goldman Sachs. He started creating online courses.\n\nAnd here is what happened:\n\n--> **350,000+ students** enrolled in his courses\n--> **33,000+ five-star ratings** on Udemy alone\n--> Featured in Forbes, Entrepreneur, and Business Insider\n--> Coached an Oscar-winning director (James W. Skotchdopole)\n--> Built a business that lets him train Muay Thai in Thailand, surf in Bali, hike the Himalayas, and explore Colombian jungles -- all while running his business from anywhere in the world\n\n**76 countries and counting.** Jimmy calls it the "007 lifestyle." And he built it entirely through online courses.\n\n---\n\nNow, here is the part that matters for you:\n\n**Jimmy did not start as a bestselling author. He did not have a massive following. He was not the "best in his field" when he launched his first course.**\n\nHe just had knowledge worth sharing. And he learned a system for packaging it into courses that transform lives AND sell.\n\nIn this free masterclass, Jimmy and Mindvalley founder Vishen break down that exact system.\n\n---\n\n**Here is what you will discover:**\n\n--> **Why "I\'m not ready" is a stubborn illusion** -- and how to overcome it right now with a rapid mindset shift that vaporizes fear and self-doubt\n--> **The secret formula for transforming lives** with your unique knowledge -- even if it is your first time creating a course\n--> **How to go from camera shy to a magnetic presenter, overnight** -- simple shifts in posture, tone, and gestures that level up your presence instantly\n--> **How to design, produce, and promote your first course in a fraction of the time** most beginners expect\n\nYou do not need to be the best in your field. You just need to start.\n\n**[Watch the Free Course Pro Masterclass \u2192](https://www.mindvalley.com/coursepro/masterclass)**\n\nWith love and abundance,\n\n[Signature]\n\nP.S. Jimmy has 33,000+ five-star ratings. Over 350,000 students. And he started exactly where you are right now -- with knowledge, doubt, and a decision to make. **[Make yours today \u2192](https://www.mindvalley.com/coursepro/masterclass)**'
-},
-
-'mc-cp-2': {
-    subject: 'Create your online course in 30 days (here is the system)',
-    preheader: 'Two leading course creators reveal the exact steps. No experience needed.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/f2007863a8/cp_lp_signup_top_d.jpg',
-    schwartz: 'Solution-Aware', cialdini: 'Authority',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/coursepro/masterclass',
-    body: 'Hey there,\n\nLet me address the elephant in the room.\n\nYou have thought about creating an online course. Maybe for months. Maybe for years. And every time you get close to starting, the same voices show up:\n\n**"I am not good enough."**\n**"Nobody will listen to me."**\n**"I have nothing new to say."**\n**"It is too complicated. Too expensive. Too time-consuming."**\n\nI get it. I really do.\n\n---\n\nBut here is what I have learned after building Mindvalley into the world\'s largest personal growth company with over 12 million students and almost half a billion dollars in course sales:\n\n**Those voices are wrong. Every single one of them.**\n\nYou do not need to be the best in your field. You do not need to be a bestselling author. You do not even need to be "good on camera" -- that is a skill you can develop overnight with the right shifts.\n\n---\n\n**In this free masterclass, Jimmy Naraine and I break down the complete Course Pro system:**\n\n--> **The Mindset Reset** -- a rapid shift that vaporizes fear and self-doubt and primes you with the confidence of a world-class course creator\n--> **The Transformation Formula** -- how to elevate your unique knowledge into a five-star course that engages and transforms, even if it is your very first time\n--> **The Camera Confidence Protocol** -- simple shifts in your posture, tone of voice, and hand gestures that make you magnetic on camera overnight\n--> **The Speed Launch System** -- how to design, produce, and promote your first course in a tiny fraction of the time you think it takes\n\n---\n\n**Why Jimmy and me?**\n\nJimmy is one of the world\'s top authorities on course creation with 350,000+ students and 33,000+ five-star ratings on Udemy. He has coached everyone from entrepreneurs to an Oscar-winning director.\n\nI have built Mindvalley from a single course to a company that has generated almost $500 million in course sales with 12 million+ students worldwide.\n\nTogether, we give you both sides: the practitioner\'s playbook AND the platform owner\'s perspective.\n\n---\n\n**The promise: create your online course in 30 days.** Not a year. Not "someday." Thirty days.\n\nThe masterclass shows you exactly how.\n\n**[Watch the Free Course Pro Masterclass \u2192](https://www.mindvalley.com/coursepro/masterclass)**\n\nTo your first course,\n\n[Signature]\n\nP.S. More than 1,000 students have already enrolled. The emotional journey of this masterclass takes you from self-doubt to permission to dual expert validation to lifestyle possibility -- all in one sitting. **[Watch it free \u2192](https://www.mindvalley.com/coursepro/masterclass)**'
-},
-
-'mc-cp-3': {
-    subject: 'Your free access to the Course Pro Masterclass expires today',
-    preheader: 'Last chance to learn how to create your online course in 30 days -- from two world-class creators.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/f2007863a8/cp_lp_signup_top_d.jpg',
-    schwartz: 'Most-Aware', cialdini: 'Scarcity + Social Proof',
-    cta: 'Watch Before It Ends \u2192', url: 'https://www.mindvalley.com/coursepro/masterclass',
-    body: 'Your free access to the Course Pro Masterclass with Jimmy Naraine and Vishen expires today.\n\n**[Click here to watch before it ends \u2192](https://www.mindvalley.com/coursepro/masterclass)**\n\n---\n\nI want to be direct with you.\n\nSomewhere right now, someone with LESS expertise than you is building an online course. They are recording lessons. They are enrolling students. They are building a business around their knowledge.\n\nThey are not smarter than you. They are not more qualified. They simply started.\n\n---\n\nHere is what I know after 22 years in education:\n\n**The world does not need another expert who stays silent.** It needs YOUR perspective. YOUR experience. YOUR unique way of explaining things.\n\nJimmy Naraine had 33,000+ five-star ratings and 350,000+ students -- and he was not "the best" in any field when he started. He was just willing to share what he knew.\n\nAnd it changed everything.\n\n---\n\n**This free masterclass covers:**\n\n--> How to overcome the "I am not ready" illusion -- the #1 barrier that stops experts from ever launching\n--> The secret formula for transforming lives with your unique knowledge -- no bestselling credentials required\n--> How to become magnetic on camera overnight -- simple shifts that change everything\n--> How to go from idea to published course in 30 days -- the exact production and promotion system\n\n---\n\n**The opportunity:**\n\n--> The online education market is projected to hit $400 billion by 2027\n--> A single course can generate income while you sleep, travel, or build your next idea\n--> Jimmy built his entire 007 lifestyle -- 76 countries, Muay Thai in Thailand, surfing in Bali -- all funded by courses\n\nYour knowledge is valuable. The system to package it exists. And this masterclass is free -- but only until tonight.\n\n**[Watch the Free Course Pro Masterclass Before It Ends \u2192](https://www.mindvalley.com/coursepro/masterclass)**\n\nRooting for you,\n\n[Signature]\n\nP.S. There is a version of your future where thousands of students are learning from you. Where your expertise generates income on autopilot. Where you have the freedom to live and work from anywhere. That future starts with 30 minutes of watching this masterclass. **[Start now \u2192](https://www.mindvalley.com/coursepro/masterclass)**'
-},
-
-// ================================================================
-// SPEAK AND INSPIRE (Lisa Nichols) — #8b5cf6
-// ================================================================
+/* ═══════════════════════════════════════════════════════════
+   FUNNEL 1 — Speak and Inspire  (Lisa Nichols)
+   ═══════════════════════════════════════════════════════════ */
 
 'mc-si-1': {
-    subject: 'She had $11.42 to her name (then became one of the greatest speakers alive)',
-    preheader: 'Lisa Nichols\' impossible journey from rock bottom to sharing stages with history\'s greatest orators.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/66d8d0bda3/sai_lp_signup_top_d.jpg',
-    schwartz: 'Problem-Aware', cialdini: 'Authority + Reciprocity',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/speak/masterclass',
-    body: 'Hey there,\n\nIn 1994, Lisa Nichols was a single mom living in South Central, L.A.\n\nShe was barely surviving on government assistance. And she had exactly **$11.42 to her name.**\n\nNot enough to buy diapers for her young child. She used a towel instead.\n\n**That moment -- wrapping her baby in a towel because she could not afford diapers -- became the lowest point of her life.**\n\nBut it also became the spark.\n\n---\n\n**Fast forward to today:**\n\nLisa Nichols is considered one of the top speaking coaches in the world. Her ability to command a stage and inspire audiences has placed her among the very best orators in history -- alongside legends like Martin Luther King Jr., John F. Kennedy, and Nelson Mandela.\n\nShe was the most-requested teacher in the hit movie, The Secret.\n\nHer heart-felt appearance on The Steve Harvey Show went viral with **40+ million views.**\n\nShe is the author of **six bestselling books**, including the New York Times bestseller "No Matter What."\n\nShe is one of only two African American women to take her company, Motivating the Masses, public.\n\nAnd her outreach program for teens has touched **211,650 young lives**, prevented over **3,800 teen suicides**, and helped **2,500 dropouts return to school.**\n\n---\n\nFrom $11.42 and a towel for diapers. To one of the most powerful speakers on the planet.\n\n**How?**\n\nLisa discovered that the very pain, struggle, and mess of her life was not something to hide. It was her greatest asset as a communicator.\n\nAnd in this free masterclass, she teaches you how to use YOUR voice, YOUR story, and YOUR struggle to find your mission, inspire others, and rally people behind the causes that sing to your soul.\n\n---\n\n**Here is what you will learn:**\n\n--> **Become unforgettable every time you speak** -- breathe life into any story with the art of "story-showing"\n--> **Rally people behind your mission** -- turn your deepest pain into your greatest power\n--> **Make the perfect first impression** -- apply Hollywood\'s "10-second rule" to instantly wow anyone\n--> **Connect like a masterful communicator** -- Lisa\'s one piece of advice for deeply connecting with any audience, whether it is one person or 1,000\n\n**[Watch the Free Speak and Inspire Masterclass \u2192](https://www.mindvalley.com/speak/masterclass)**\n\nWith love and abundance,\n\n[Signature]\n\nP.S. Lisa went from $11.42 to inspiring millions. Her story proves that your mess is your message. **[Learn how to unlock yours \u2192](https://www.mindvalley.com/speak/masterclass)**'
+  subject: 'you have something important to say and the world needs to hear it',
+  preheader: 'But every time you stand up to speak, something holds you back.',
+  img: '',
+  schwartz: 'Problem-Aware',
+  cialdini: 'Authority + Reciprocity',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/speak/masterclass',
+  body:
+    "# Your Voice Matters. Here Is How to Unleash It.\n\n" +
+    "![Lisa Nichols](https://storyblok-cdn.mindvalley.com/f/60579/700x760/5d7d6c8d99/sai_sp_author-m_2x.jpg)\n\n" +
+    "You have something important to say and the world needs to hear it.\n\n" +
+    "But every time you stand up to speak -- in a meeting, on a stage, on camera, even at a dinner table -- something holds you back. The words come out flat. The confidence evaporates. The message that feels so clear in your head gets lost somewhere between your brain and your mouth.\n\n" +
+    "You are not alone. And the problem is not your voice. The problem is that nobody ever taught you how to use it.\n\n" +
+    "---\n\n" +
+    "In 1994, Lisa Nichols was a single mother in South Central L.A. with **$11.42 in her bank account.** She wrapped her baby in a towel because she could not afford diapers.\n\n" +
+    "Today she is considered one of the greatest speakers alive -- placed alongside Martin Luther King Jr., John F. Kennedy, and Nelson Mandela. Her Steve Harvey Show appearance hit **40+ million views.** Her outreach program has prevented over **3,800 teen suicides.** She took her company, Motivating the Masses, public -- one of only two African American women ever to do so.\n\n" +
+    "From $11.42 and a towel to one of the most powerful voices on the planet.\n\n" +
+    "**How?** She discovered that the very pain and mess of her life was not something to hide. It was her greatest communication asset.\n\n" +
+    "And in this free masterclass, she teaches you how to use YOUR voice, YOUR story, and YOUR struggle to find your mission and inspire others.\n\n" +
+    "---\n\n" +
+    "**Here is what you will learn:**\n\n" +
+    "--> **The art of story-showing** -- breathe life into any story so your audience does not just hear you, they feel you\n\n" +
+    "--> **Mess to Message** -- turn your deepest pain into your most powerful communication tool\n\n" +
+    "--> **Hollywood's 10-Second Rule** -- the instant impression technique that makes you unforgettable\n\n" +
+    "--> **The Connection Method** -- Lisa's one piece of advice for deeply connecting with any audience, whether one person or 1,000\n\n" +
+    "---\n\n" +
+    "The masterclass is free. Lisa holds nothing back.\n\n" +
+    "[Watch the free Speak and Inspire masterclass here](https://www.mindvalley.com/speak/masterclass)\n\n" +
+    "With love,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. Lisa went from $11.42 to inspiring millions. If that is not proof that your mess is your message, nothing is. In my next email, I will break down her signature story-showing technique and share two real student transformations."
 },
 
 'mc-si-2': {
-    subject: 'The 4 secrets to powerful communication (Lisa Nichols masterclass)',
-    preheader: 'Story-showing, Hollywood\'s 10-second rule, and the one technique Lisa uses with every audience.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/66d8d0bda3/sai_lp_signup_top_d.jpg',
-    schwartz: 'Solution-Aware', cialdini: 'Authority',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/speak/masterclass',
-    body: 'Hey there,\n\nLet me ask you a question.\n\nHave you ever watched someone speak -- on a stage, in a meeting, even in a casual conversation -- and thought: "How do they DO that? How do they hold everyone\'s attention like that?"\n\nIt feels like magic. Like some people are just born with it.\n\n**They are not.** And Lisa Nichols is living proof.\n\n---\n\nBefore Lisa became one of the most powerful speakers in the world, she was terrified of her own voice. She grew up believing her words did not matter. She spent years shrinking herself to fit other people\'s expectations.\n\nBut then she learned something that changed everything:\n\n**Speaking is not a talent. It is a skill.** And it has a system.\n\nNow Lisa teaches that system. And in this free masterclass, she reveals the 4 core secrets that have made her one of the most sought-after communication coaches on the planet.\n\n---\n\n**Secret 1: The Art of Story-Showing**\n\nMost people tell stories. Lisa teaches you to SHOW them. To breathe life into every narrative so your audience does not just hear your words -- they feel them, see them, and live them alongside you. This single technique separates forgettable speakers from unforgettable ones.\n\n**Secret 2: Turning Pain into Power**\n\nYour deepest struggles are not liabilities. They are your most powerful communication tools. Lisa teaches you how to articulate your pain in a way that inspires others to join the causes that matter to you. This is how movements are born.\n\n**Secret 3: Hollywood\'s 10-Second Rule**\n\nYou have 10 seconds to capture someone\'s attention. Ten. Lisa teaches you the exact technique Hollywood uses to create instant connection -- whether you are speaking to an audience of 1,000 or having a conversation over coffee.\n\n**Secret 4: The One-Piece Connection Method**\n\nWhether speaking to one person or thousands, there is ONE thing Lisa does every single time that creates deep, lasting connection. She has never shared this as clearly as she does in this masterclass.\n\n---\n\n**Featured on:** Oprah, The Steve Harvey Show, The Today Show, and featured as the most-requested teacher in The Secret.\n\n**1,000+ students** have already enrolled. This is not motivational fluff -- it is a systematic approach to becoming a world-class communicator.\n\n**[Watch the Free Speak and Inspire Masterclass \u2192](https://www.mindvalley.com/speak/masterclass)**\n\nTo your most powerful voice,\n\n[Signature]\n\nP.S. Lisa\'s Steve Harvey Show appearance went viral with 40+ million views. That kind of impact is not accidental -- it is the result of these exact techniques applied with authenticity and heart. **[Learn them for free \u2192](https://www.mindvalley.com/speak/masterclass)**'
+  subject: 'the difference between story-telling and story-showing (it changes everything)',
+  preheader: 'Lisa Nichols\' signature technique -- plus two students who used it to transform their careers.',
+  img: '',
+  schwartz: 'Solution-Aware',
+  cialdini: 'Authority + Social Proof',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/speak/masterclass',
+  body:
+    "# The Technique That Separates Good Speakers from Unforgettable Ones\n\n" +
+    "Most people tell stories. Lisa Nichols teaches you to **show** them.\n\n" +
+    "Here is the difference.\n\n" +
+    "Story-telling: *\"I was broke, living on a couch, and feeling hopeless.\"*\n\n" +
+    "Story-showing: *\"Picture this. A kitchen counter in South Central L.A. One towel. One baby. And $11.42 on a bank statement that I keep re-reading because maybe -- maybe -- I missed a zero.\"*\n\n" +
+    "Do you feel it? Story-showing puts your audience inside the moment. They see the kitchen. They feel the towel. They hear the silence.\n\n" +
+    "This is not magic. It is technique. And it is the core of what Lisa teaches in the free Speak and Inspire masterclass.\n\n" +
+    "---\n\n" +
+    "**How story-showing works:**\n\n" +
+    "--> **Sensory anchors** -- place your audience in the room with specific physical details (the $11.42, the towel, the kitchen counter)\n\n" +
+    "--> **Emotional precision** -- name the exact feeling, not the category (not \"sad\" but \"the quiet panic of counting coins at midnight\")\n\n" +
+    "--> **The pivot** -- the moment everything changed, told with the same vivid specificity as the struggle\n\n" +
+    "When you master this, every conversation, presentation, and piece of content you create becomes magnetic. People do not just listen. They lean in.\n\n" +
+    "---\n\n" +
+    "Two people who learned this technique and put it to work:\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/steph-escorial.jpg\n**\"I finally feel confident enough to speak in front of an audience. Lisa's framework gave me the structure I was missing.\"**\nStephanie Escorial, Health Coach, London, United Kingdom\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/vanessa-cardenas.jpg\n**\"I went from questioning my ability to speaking confidently on podcasts. The mess-to-message reframe changed how I see my own story.\"**\nVanessa Cardenas, Life Coach, New York, United States\n\n" +
+    "The masterclass is free. Lisa walks you through story-showing step by step.\n\n" +
+    "[Watch the free masterclass now](https://www.mindvalley.com/speak/masterclass)\n\n" +
+    "To your most powerful voice,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. Tomorrow is the last day for free access. If you have been meaning to watch, this is the nudge."
 },
 
 'mc-si-3': {
-    subject: 'Your free access to Lisa Nichols\' Masterclass expires today',
-    preheader: 'Last chance to learn the 4 secrets to powerful communication from one of the world\'s best speakers.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1200x770/66d8d0bda3/sai_lp_signup_top_d.jpg',
-    schwartz: 'Most-Aware', cialdini: 'Scarcity + Social Proof',
-    cta: 'Watch Before It Ends \u2192', url: 'https://www.mindvalley.com/speak/masterclass',
-    body: 'Your free access to Lisa Nichols\' Speak and Inspire Masterclass expires today.\n\n**[Click here to watch before it ends \u2192](https://www.mindvalley.com/speak/masterclass)**\n\n---\n\nI want to share something with you that most people never realize:\n\n**The ability to speak powerfully is the single highest-leverage skill you can develop.**\n\nThink about it:\n\n--> Every job interview is a speaking performance\n--> Every sales conversation requires persuasion\n--> Every relationship deepens through vulnerability and articulation\n--> Every leader who changed the world did it with their voice\n\nMartin Luther King Jr. did not just have a dream. He had the ability to articulate it in a way that moved millions.\n\n---\n\nLisa Nichols went from $11.42 in her bank account to one of the most powerful speakers alive. Her teens program prevented 3,800 suicides. Her Steve Harvey appearance hit 40 million views. Her books became New York Times bestsellers.\n\n**All because she learned to speak with power, vulnerability, and precision.**\n\nAnd she did not start with any natural talent for it. She started with pain, fear, and a towel wrapped around her baby because she could not afford diapers.\n\n---\n\n**In this masterclass, you will learn:**\n\n--> **Story-showing** -- the technique that makes your stories unforgettable\n--> **Pain to power** -- how to turn your struggle into your greatest communication asset\n--> **The 10-second rule** -- Hollywood\'s method for instant, magnetic first impressions\n--> **The connection method** -- Lisa\'s one technique for deeply connecting with any audience\n\nThese are not abstract ideas. These are repeatable techniques you can use in your very next conversation.\n\n---\n\n**This masterclass is your starting point.** The first step toward becoming the kind of communicator people remember. The kind who does not just speak -- but moves rooms, changes minds, and inspires action.\n\nIt is free. It is available right now. And after tonight, it will not be.\n\n**[Watch the Speak and Inspire Masterclass Before It Ends \u2192](https://www.mindvalley.com/speak/masterclass)**\n\nTo your voice finding its power,\n\n[Signature]\n\nP.S. Lisa was placed alongside MLK Jr., JFK, and Nelson Mandela as one of history\'s greatest orators. She started with nothing. The techniques she teaches are learnable, practicable, and life-changing. But only if you actually watch the masterclass. **[Your last chance is today \u2192](https://www.mindvalley.com/speak/masterclass)**'
+  subject: 'last call -- lisa nichols\' speak and inspire masterclass',
+  preheader: 'Free access closes tonight. The 4 secrets to powerful communication.',
+  img: '',
+  schwartz: 'Most-Aware',
+  cialdini: 'Reciprocity + Commitment',
+  cta: 'Watch Before It Closes \u2192',
+  url: 'https://www.mindvalley.com/speak/masterclass',
+  body:
+    "# Last Call -- Speak and Inspire Masterclass\n\n" +
+    "This is the last email about Lisa Nichols' Speak and Inspire masterclass.\n\n" +
+    "Here is what I want to leave you with.\n\n" +
+    "The ability to speak powerfully is the single highest-leverage skill you can develop. Every job interview is a speaking performance. Every sales conversation requires persuasion. Every relationship deepens through vulnerability and articulation. Every leader who changed the world did it with their voice.\n\n" +
+    "Lisa went from $11.42 in her bank account to being compared alongside MLK Jr. and JFK. She did not start with talent. She started with pain and a system for turning that pain into power.\n\n" +
+    "---\n\n" +
+    "**In the masterclass you will learn:**\n\n" +
+    "--> **Story-showing** -- the technique that makes your stories unforgettable\n\n" +
+    "--> **Mess to Message** -- how to turn your struggle into your greatest asset\n\n" +
+    "--> **The 10-Second Rule** -- Hollywood's method for instant first impressions\n\n" +
+    "--> **The Connection Method** -- Lisa's technique for deeply connecting with any audience\n\n" +
+    "---\n\n" +
+    "The masterclass is free. It is available right now. After tonight it may not be.\n\n" +
+    "[Watch the Speak and Inspire masterclass before it closes](https://www.mindvalley.com/speak/masterclass)\n\n" +
+    "Rooting for your voice,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. Your story deserves to be heard. Not the polished, LinkedIn-ready version. The real one. Lisa teaches you how to tell it in a way that moves people. That starts with pressing play."
 },
 
-// ================================================================
-// STAGE EFFECT (Eric Edmeades) — #3b82f6
-// [PLACEHOLDER EMAILS — pending more detailed content]
-// ================================================================
+/* ═══════════════════════════════════════════════════════════
+   FUNNEL 2 — The Stage Effect  (Eric Edmeades)
+   ═══════════════════════════════════════════════════════════ */
 
 'mc-se-1': {
-    subject: 'From homeless at 15 to touring with Tony Robbins (his speaking secret)',
-    preheader: 'Eric Edmeades went from sleeping on the streets to 10,000+ hours on stage. Here is his free masterclass.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1920x1080/6f3157d965/tse-solution.jpg',
-    schwartz: 'Problem-Aware', cialdini: 'Authority + Reciprocity',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/stage/masterclass',
-    body: 'Hey there,\n\n[PLACEHOLDER -- Stage Effect Email 1: Story + Hook]\n\nAt 15 years old, Eric Edmeades was homeless.\n\nNo safety net. No family support. No clear path forward. Just a teenager sleeping on the streets, trying to figure out how to survive.\n\n**Fast forward to today:**\n\nEric is one of the globe\'s most versatile speakers. He has logged over **10,000 hours of stage time.** He tours alongside Richard Branson, Bill Clinton, and Tony Robbins. In 2018, the Canadian Senate Speaker awarded him a medal for his contributions.\n\nHe is the creator of **Behavioral Change Dynamics** and the founder of **Speaker Nation.**\n\nAnd the companies that trust him to train their teams? **PWC. Google. Facebook. Cisco. ExxonMobil. Salesforce.**\n\n---\n\nBut here is what makes Eric different from every other "speaking coach" out there:\n\n**Eric does not believe speaking is a talent. He believes it is a skill.** A skill with a system. A system with three core pillars.\n\n---\n\n**The 3 Pillars of the Stage Effect:**\n\n--> **Storytelling Mastery** -- the heartbeat of any unforgettable speech. Eric teaches you how to structure stories that captivate audiences and make your message stick.\n--> **Presentation Mechanics** -- Eric\'s blueprint for creating any successful presentation from scratch. No more Death-by-PowerPoint. No more rambling.\n--> **Stage Presence and Charisma** -- how to eliminate stage fright and tap into your authentic persona. The energy transfer technique that makes you magnetic from the moment you open your mouth.\n\nIn his free masterclass, Eric breaks down the foundation of this system -- and shows you how to transform into a master speaker in 21 days.\n\n---\n\n**The results speak for themselves:**\n\n--> 90% of students report being more confident on stage\n--> 75% say they communicate better in all areas of life\n--> 85% improved their story delivery\n--> NPS rating of 4.98 at Mindvalley events\n\n**[Watch the Free Stage Effect Masterclass \u2192](https://www.mindvalley.com/stage/masterclass)**\n\nWith love and abundance,\n\n[Signature]\n\nP.S. Have you ever doubted your ability to speak on a stage? Or shied away from posting a video because you lacked confidence in your delivery? Eric has been there. He went from homeless teenager to the world\'s stage. The difference was learning this system. **[Learn it free \u2192](https://www.mindvalley.com/stage/masterclass)**'
+  subject: 'the gap between knowing your material and commanding a room is not talent',
+  preheader: 'It is technique. Eric Edmeades has 10,000+ hours of proof.',
+  img: '',
+  schwartz: 'Problem-Aware',
+  cialdini: 'Authority + Reciprocity',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/stage/masterclass',
+  body:
+    "# The Gap Between Knowing and Commanding\n\n" +
+    "![Eric Edmeades](https://storyblok-cdn.mindvalley.com/f/60579/1920x1080/6f3157d965/tse-solution.jpg)\n\n" +
+    "The gap between knowing your material and commanding a room is not talent. It is technique.\n\n" +
+    "You have seen it happen. Someone with deep expertise stands up to present and the room drifts. Eyes glaze. Phones appear. The knowledge is there but the delivery cannot carry it.\n\n" +
+    "Then someone else gets up -- maybe with less expertise -- and the room leans in. People laugh at the right moments. Nod at the right moments. Remember every word the next day.\n\n" +
+    "**The difference is not charisma. It is a system.**\n\n" +
+    "---\n\n" +
+    "Eric Edmeades was homeless at 15. No safety net. No family support. Just a teenager sleeping on the streets.\n\n" +
+    "Today he has logged over **10,000 hours on stage.** He tours alongside Richard Branson, Bill Clinton, and Tony Robbins. The Canadian Senate Speaker awarded him a medal for his contributions. And the companies that trust him to train their teams include **PWC, Google, Facebook, Cisco, ExxonMobil, and Salesforce.**\n\n" +
+    "His program, The Stage Effect, is built on three pillars: **Storytelling Mastery, Presentation Mechanics, and Stage Presence.**\n\n" +
+    "In this free masterclass, Eric breaks down the foundation of the system -- and shows you how to transform into a commanding speaker in 21 days.\n\n" +
+    "---\n\n" +
+    "**Here is what you will learn:**\n\n" +
+    "--> **The 15-Second Hook** -- your audience decides in 15 seconds whether to pay attention or check out. Eric teaches you how to own those seconds.\n\n" +
+    "--> **Energy Transfer** -- communication is not just words. It is energy. Learn to project the confidence and presence that makes audiences trust you before you finish your first sentence.\n\n" +
+    "--> **Eric's Presentation Blueprint** -- a repeatable framework for designing any presentation, on any topic, for any audience.\n\n" +
+    "--> **The Authentic Persona Method** -- eliminate stage fright by uncovering the version of you that is fully present and magnetic.\n\n" +
+    "---\n\n" +
+    "90% of students report being more confident on stage after Eric's program. 85% improve their story delivery. These are not small numbers.\n\n" +
+    "[Watch the free Stage Effect masterclass here](https://www.mindvalley.com/stage/masterclass)\n\n" +
+    "With love,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. In my next email, I will break down the 15-Second Hook technique in detail -- and share two students who used it to book paid speaking gigs and deliver TEDx talks."
 },
 
 'mc-se-2': {
-    subject: 'Transform into a master speaker in 21 days (here is how)',
-    preheader: 'Storytelling mastery. Stage presence. No more Death-by-PowerPoint. Eric Edmeades\' complete system.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1920x1080/6f3157d965/tse-solution.jpg',
-    schwartz: 'Solution-Aware', cialdini: 'Authority',
-    cta: 'Watch Free Masterclass \u2192', url: 'https://www.mindvalley.com/stage/masterclass',
-    body: 'Hey there,\n\n[PLACEHOLDER -- Stage Effect Email 2: What You\'ll Learn]\n\nLet me ask you something.\n\nHave you ever:\n\n--> Doubted your ability to speak on stage?\n--> Refrained from speaking up in a meeting?\n--> Shied away from posting a video on social media because you lacked confidence in your delivery?\n\nIf yes -- this is not a confidence problem. It is a skills problem. And skills can be learned.\n\n---\n\n**Eric Edmeades has over 10,000 hours of stage time.** He has spoken to audiences of 10 and audiences of 10,000. And he says the same thing every time:\n\n**"Speaking is not a talent. It is a skill. You have simply never been shown how to unleash it."**\n\nHis program, The Stage Effect, is a 21-day transformation. Just 5-20 minutes per day. And by the end, you are a fundamentally different communicator.\n\n---\n\n**Here is the 21-day roadmap:**\n\n--> **Part 1: Lay the Foundation** -- learn the principles of an unforgettable presentation. What makes audiences lean in versus check their phones.\n--> **Part 2: Master the Primary Operating Language of the Mind** -- storytelling. Eric breaks down the exact narrative structures that captivate human attention.\n--> **Part 3: Design an Unforgettable Presentation** -- Eric\'s presentation blueprint that works for any topic, any audience, any format.\n--> **Part 4: Learn to Present Magically** -- stage presence, energy transfer, charisma. The final piece that makes everything come alive.\n\n---\n\n**What You Will Master:**\n\n--> The art of communication -- so your message is crystal clear every time\n--> Public speaking that captivates -- hold any room from your first word to your last\n--> Unscripted brilliance -- deliver show-stopping speeches on the fly\n--> No more Death-by-PowerPoint -- make slides come alive instead of putting audiences to sleep\n--> Monetize your influence -- turn your speaking skills into a revenue-generating asset\n\n---\n\n**Trusted by PWC, Google, Facebook, Cisco, ExxonMobil, and Salesforce.**\n\nThe free masterclass gives you the core framework. 21 days is all it takes to transform.\n\n**[Watch the Free Stage Effect Masterclass \u2192](https://www.mindvalley.com/stage/masterclass)**\n\nTo your stage presence,\n\n[Signature]\n\nP.S. 90% of Eric\'s students report being more confident on stage. 85% improved their story delivery. These are not small numbers -- and they come from a 21-day program that takes just 5-20 minutes per day. **[See the masterclass \u2192](https://www.mindvalley.com/stage/masterclass)**'
+  subject: 'the first 15 seconds decide everything (here is how to own them)',
+  preheader: 'Eric Edmeades\' open-loop technique -- plus two real transformations.',
+  img: '',
+  schwartz: 'Solution-Aware',
+  cialdini: 'Authority + Social Proof',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/stage/masterclass',
+  body:
+    "# Your Audience Decides in 15 Seconds\n\n" +
+    "Most speakers open with: *\"Hi, my name is... and today I will be talking about...\"*\n\n" +
+    "That opening tells the audience: \"You can safely check your phone now.\"\n\n" +
+    "Eric Edmeades teaches a different approach. He calls it **the 15-Second Hook** -- and it is the single most important technique he has developed across 10,000+ hours on stage.\n\n" +
+    "---\n\n" +
+    "**How the 15-Second Hook works:**\n\n" +
+    "Your first 15 seconds need to create an **open loop** in the audience's mind. An open loop is a question, mystery, or tension that the brain needs to resolve. Until it is resolved, the audience cannot look away.\n\n" +
+    "Examples:\n\n" +
+    "--> *\"At 15, I was sleeping on the street. By 35, I was sharing a stage with Tony Robbins. The difference was one conversation that lasted 90 seconds.\"* (Now they need to know what that conversation was.)\n\n" +
+    "--> *\"There is a technique so powerful that Google, Facebook, and Salesforce pay me to teach it. It takes 30 seconds to learn. And you will know it before you leave this room.\"* (Now they are waiting for the technique.)\n\n" +
+    "The open loop hijacks the brain's need for completion. It is neuroscience applied to stagecraft.\n\n" +
+    "---\n\n" +
+    "But the 15-Second Hook is not just words. Eric teaches that communication is **energy transfer.** The confidence you bring in those first 15 seconds sets the frequency for the entire presentation.\n\n" +
+    "Confident energy in the first 15 seconds = the audience trusts you for the next 45 minutes.\n\n" +
+    "This is one technique from the free masterclass. There are many more inside.\n\n" +
+    "---\n\n" +
+    "Two people who learned Eric's system and put it to work:\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/cristina-esteve.jpg\n**\"The program's timing was perfect for my upcoming TEDx Talk preparation. I delivered it with confidence and a completely new strategy.\"**\nCristina Esteve, Health Coach, Barcelona, Spain\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/izabella-geapana.jpg\n**\"I realized I can prepare a talk that aligns with my approach. I am now preparing 2 paid speaking events after completing the program.\"**\nIzabella Geapana, Transformation Coach, Cluj-Napoca, Romania\n\n" +
+    "[Watch the free Stage Effect masterclass now](https://www.mindvalley.com/stage/masterclass)\n\n" +
+    "To your commanding presence,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. Tomorrow is the last call. If you have been thinking about it -- watch it tonight. The 15-Second Hook alone is worth the 30 minutes."
 },
 
 'mc-se-3': {
-    subject: 'Your free access to the Stage Effect Masterclass expires today',
-    preheader: 'Last chance to learn Eric Edmeades\' system for commanding any stage. Free access ends tonight.',
-    img: 'https://storyblok-cdn.mindvalley.com/f/60579/1920x1080/6f3157d965/tse-solution.jpg',
-    schwartz: 'Most-Aware', cialdini: 'Scarcity + Social Proof',
-    cta: 'Watch Before It Ends \u2192', url: 'https://www.mindvalley.com/stage/masterclass',
-    body: 'Your free access to Eric Edmeades\' Stage Effect Masterclass expires today.\n\n**[Click here to watch before it ends \u2192](https://www.mindvalley.com/stage/masterclass)**\n\n---\n\n[PLACEHOLDER -- Stage Effect Email 3: Last Call]\n\nHere is the truth about speaking:\n\n**Every important moment in your career and your life comes down to how you communicate.**\n\nThe pitch that lands the deal. The presentation that earns the promotion. The story that inspires your team. The talk that changes someone\'s mind. The video that goes viral.\n\n**All of it is speaking.**\n\nAnd yet most people never get trained. They wing it. They hope for the best. They wonder why their ideas do not land the way they imagined.\n\n---\n\nEric Edmeades went from homeless at 15 to sharing stages with Tony Robbins, Richard Branson, and Bill Clinton. He has logged 10,000+ hours on stage. He has trained teams at Google, Facebook, PWC, Cisco, ExxonMobil, and Salesforce.\n\nHis system works. The numbers prove it:\n\n--> **90%** report more confidence on stage\n--> **85%** improved their story delivery\n--> **75%** communicate better in all areas of life\n--> **NPS rating: 4.98** at Mindvalley events\n\n---\n\n**In the masterclass, you will learn:**\n\n--> The 3 pillars of stage mastery: storytelling, presentation mechanics, and stage presence\n--> How to eliminate stage fright permanently\n--> The energy transfer technique that makes you magnetic\n--> Eric\'s blueprint for designing any presentation from scratch\n\nThis is your last chance to access this masterclass for free.\n\n**[Watch the Stage Effect Masterclass Before It Ends \u2192](https://www.mindvalley.com/stage/masterclass)**\n\nRooting for your voice,\n\n[Signature]\n\nP.S. 21 days. 5-20 minutes per day. That is all it takes to transform into a fundamentally different speaker. But it starts with watching this free masterclass. **[Access expires tonight \u2192](https://www.mindvalley.com/stage/masterclass)**'
+  subject: 'last call -- the stage effect masterclass with eric edmeades',
+  preheader: 'Free access closes tonight. 21 days to transform how you speak.',
+  img: '',
+  schwartz: 'Most-Aware',
+  cialdini: 'Reciprocity + Commitment',
+  cta: 'Watch Before It Closes \u2192',
+  url: 'https://www.mindvalley.com/stage/masterclass',
+  body:
+    "# Last Call -- The Stage Effect Masterclass\n\n" +
+    "This is my last email about Eric Edmeades' Stage Effect masterclass.\n\n" +
+    "Here is the truth about speaking: every important moment in your career and your life comes down to how you communicate. The pitch that lands the deal. The presentation that earns the promotion. The story that inspires your team.\n\n" +
+    "Most people never get trained. They wing it. They hope for the best. They wonder why their ideas do not land the way they imagined.\n\n" +
+    "Eric went from homeless at 15 to sharing stages with Tony Robbins, Richard Branson, and Bill Clinton. He has trained teams at Google, Facebook, PWC, Cisco, and Salesforce. His system works. The numbers prove it.\n\n" +
+    "---\n\n" +
+    "**In the masterclass you will learn:**\n\n" +
+    "--> **The 15-Second Hook** -- own the first 15 seconds and you own the room\n\n" +
+    "--> **Energy Transfer** -- project confidence that makes audiences trust you instantly\n\n" +
+    "--> **The Presentation Blueprint** -- design any talk from scratch\n\n" +
+    "--> **The Authentic Persona** -- eliminate stage fright permanently\n\n" +
+    "---\n\n" +
+    "The masterclass is free. It is available right now. After tonight it may not be.\n\n" +
+    "[Watch the Stage Effect masterclass before it closes](https://www.mindvalley.com/stage/masterclass)\n\n" +
+    "Rooting for your stage presence,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. 21 days. 5-20 minutes per day. That is all it takes to transform. But it starts with watching this free masterclass. Press play."
+},
+
+/* ═══════════════════════════════════════════════════════════
+   FUNNEL 3 — The 7-Figure Creator  (John Lee)
+   ═══════════════════════════════════════════════════════════ */
+
+'mc-cr-1': {
+  subject: 'you have expertise worth sharing -- but turning knowledge into a business is a different skill',
+  preheader: 'John Lee went from 0 to 6M followers with a system anyone can learn.',
+  img: '',
+  schwartz: 'Problem-Aware',
+  cialdini: 'Authority + Reciprocity',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/creator/masterclass',
+  body:
+    "# From Expertise to Business -- The Missing Skill\n\n" +
+    "![John Lee](https://a.storyblok.com/f/60579/1818x1022/9cfa71b698/trainer_john-lee_d.jpg)\n\n" +
+    "You have expertise worth sharing. Maybe years of it. Maybe decades.\n\n" +
+    "But turning knowledge into a business? That is a different skill entirely. And nobody teaches it in school.\n\n" +
+    "You see other people -- sometimes with less expertise than you -- building massive audiences, launching products, turning their passion into income. And you think: what do they know that I do not?\n\n" +
+    "**They know a system.** That is it. Not more talent. Not more charisma. A system.\n\n" +
+    "---\n\n" +
+    "John Lee was a self-made millionaire by 27. But here is the part that matters: **he started with zero followers.** Zero audience. Zero viral moments.\n\n" +
+    "In 3.5 years, he grew from 0 to over **6 million followers** -- not by gaming algorithms, but by building a repeatable system that turns anyone's passion into a 7-figure content business.\n\n" +
+    "Today he mentors CEOs, celebrities, and athletes. He has shared stages with Tony Robbins and Bill Clinton. He has been featured in Forbes, Fortune, The Wall Street Journal, and the BBC.\n\n" +
+    "And now he is teaching his entire system in a free 32-minute masterclass hosted by Vishen.\n\n" +
+    "---\n\n" +
+    "**Here is what you will learn:**\n\n" +
+    "--> **The Viral Content Formula** -- why some posts explode while others die in silence, and the patterns that trigger algorithmic amplification\n\n" +
+    "--> **The Monetization Engine** -- how to go from \"I have followers\" to \"I have income streams\" without being salesy\n\n" +
+    "--> **The Personal Brand Architecture** -- position yourself as the go-to authority in any niche, even if it feels crowded\n\n" +
+    "--> **The Growth Flywheel** -- John's system for consistent growth that compounds instead of burning you out\n\n" +
+    "---\n\n" +
+    "**189,296 people** have already watched this masterclass.\n\n" +
+    "[Watch the free 7-Figure Creator masterclass here](https://www.mindvalley.com/creator/masterclass)\n\n" +
+    "With love,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. In my next email, I will share one specific monetization technique from the masterclass -- and two real students who used it to go from zero to paying clients."
+},
+
+'mc-cr-2': {
+  subject: 'the content-to-revenue pipeline (and two people who built one from scratch)',
+  preheader: 'John Lee\'s monetization framework -- plus Jan and Eve who used it to land real clients.',
+  img: '',
+  schwartz: 'Solution-Aware',
+  cialdini: 'Authority + Social Proof',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/creator/masterclass',
+  body:
+    "# The Content-to-Revenue Pipeline\n\n" +
+    "Here is what most aspiring creators get wrong.\n\n" +
+    "They think the formula is: **create more content = get more followers = make more money.**\n\n" +
+    "It sounds logical. But it is wrong.\n\n" +
+    "John Lee built 6 million followers not because he posted more than everyone else. He posted **smarter.** He had a system -- one he calls the Content-to-Revenue Pipeline -- that turns every piece of content into a strategic asset.\n\n" +
+    "---\n\n" +
+    "**The framework in brief:**\n\n" +
+    "--> **Content Pillars** -- instead of asking \"what should I post today?\" you build 3-5 core themes. Every piece of content falls into one. You never run out of ideas, your content is consistent, and you build authority.\n\n" +
+    "--> **The Algorithm Layer** -- specific patterns that trigger platforms to amplify your content. Not gaming. Not tricks. Structural choices in how you open, format, and close each post.\n\n" +
+    "--> **The Monetization Bridge** -- the bridge between followers and revenue. Most creators skip this entirely and wonder why they have 50,000 followers and no income. John's system builds the bridge from day one.\n\n" +
+    "This is not theory. This is the exact system that took John from unknown to 6 million followers and 7-figure income.\n\n" +
+    "---\n\n" +
+    "Two people who learned this system and put it to work:\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/jan-ai-specialist.jpg\n**\"Now I have clients that pay me $4,000 a month. I overcame my social media apprehension and built a real business.\"**\nJan, AI and Automations Specialist\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/eve-li-cyprus.jpg\n**\"We secured six quality clients in our first year using the strategies John teaches. The content pillar framework alone transformed our approach.\"**\nEve Li, Business Owner, Cyprus\n\n" +
+    "The masterclass is 32 minutes. It is free. Vishen hosts it.\n\n" +
+    "[Watch the free masterclass now](https://www.mindvalley.com/creator/masterclass)\n\n" +
+    "To your creator journey,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. Tomorrow is the last call. If you have been thinking about turning your expertise into a business -- this is the most efficient 32 minutes you can spend."
+},
+
+'mc-cr-3': {
+  subject: 'last call -- the 7-figure creator masterclass with john lee',
+  preheader: 'Free access closes tonight. 32 minutes that could change your business.',
+  img: '',
+  schwartz: 'Most-Aware',
+  cialdini: 'Reciprocity + Commitment',
+  cta: 'Watch Before It Closes \u2192',
+  url: 'https://www.mindvalley.com/creator/masterclass',
+  body:
+    "# Last Call -- 7-Figure Creator Masterclass\n\n" +
+    "This is the last email about John Lee's 7-Figure Creator masterclass.\n\n" +
+    "Let me be direct. Somewhere right now, someone with less expertise than you is building a content business. They are recording videos. They are enrolling clients. They are generating revenue from their knowledge.\n\n" +
+    "They are not smarter than you. They are not more qualified. They simply learned a system and started.\n\n" +
+    "---\n\n" +
+    "**The creator economy is now worth over $100 billion.** And the gap between \"content creator\" and \"7-figure creator\" is not talent. It is a system.\n\n" +
+    "John proved this. Zero to 6 million followers in 3.5 years. Featured in Forbes, Fortune, Wall Street Journal, BBC. His system is repeatable.\n\n" +
+    "**In the masterclass you will learn:**\n\n" +
+    "--> **The Viral Content Formula** -- patterns that trigger algorithmic amplification\n\n" +
+    "--> **The Monetization Engine** -- turn followers into revenue without being salesy\n\n" +
+    "--> **The Personal Brand Architecture** -- become the go-to authority in your niche\n\n" +
+    "--> **The Growth Flywheel** -- consistent growth that compounds\n\n" +
+    "---\n\n" +
+    "189,296 people have watched this masterclass. The cost is free. The time is 32 minutes.\n\n" +
+    "[Watch the free masterclass before it closes tonight](https://www.mindvalley.com/creator/masterclass)\n\n" +
+    "Rooting for your success,\n\n" +
+    "**The Mindvalley Team**\n\n" +
+    "P.S. A year from now, you will wish you had started today. Press play."
+},
+
+/* ═══════════════════════════════════════════════════════════
+   FUNNEL 4 — Course Pro  (Jimmy Naraine & Vishen)
+   ═══════════════════════════════════════════════════════════ */
+
+'mc-cp-1': {
+  subject: 'everyone says create a course -- nobody tells you how to make one people actually finish',
+  preheader: 'Jimmy Naraine has 350,000+ students and 33,000+ five-star ratings. Here is his free system.',
+  img: '',
+  schwartz: 'Problem-Aware',
+  cialdini: 'Authority + Reciprocity',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/coursepro/masterclass',
+  body:
+    "# Everyone Says \"Create a Course.\" Nobody Tells You How.\n\n" +
+    "![Course Pro](https://storyblok-cdn.mindvalley.com/f/60579/1200x770/f2007863a8/cp_lp_signup_top_d.jpg)\n\n" +
+    "Everyone says \"create a course.\" Nobody tells you how to make one people actually finish.\n\n" +
+    "You have the expertise. You have the ideas. You have probably started outlining a course three different times. But every time you sit down to actually build it, the same questions paralyze you:\n\n" +
+    "How do I structure it? What if nobody buys it? How do I get comfortable on camera? How long should it be? What platform do I use?\n\n" +
+    "**The problem is not your knowledge. It is that nobody showed you the production system.**\n\n" +
+    "---\n\n" +
+    "Jimmy Naraine had a perfectly good career at Goldman Sachs. But he had knowledge inside him that was dying to get out.\n\n" +
+    "So he left. He started creating online courses. And here is what happened:\n\n" +
+    "--> **350,000+ students** enrolled\n\n" +
+    "--> **33,000+ five-star ratings** on Udemy alone\n\n" +
+    "--> Featured in Forbes, Entrepreneur, and Business Insider\n\n" +
+    "--> Built a business that lets him train Muay Thai in Thailand, surf in Bali, and explore 76 countries -- all while his courses generate income\n\n" +
+    "In this free masterclass, Jimmy and Mindvalley founder Vishen break down the exact system. From idea to published course in 30 days.\n\n" +
+    "---\n\n" +
+    "**Here is what you will learn:**\n\n" +
+    "--> **The \"I'm Not Ready\" Demolisher** -- a rapid mindset shift that vaporizes the self-doubt stopping you from starting\n\n" +
+    "--> **The Transformation Formula** -- how to structure your unique knowledge into a course that engages and transforms, even if it is your first time\n\n" +
+    "--> **Camera Confidence overnight** -- simple shifts in posture, tone, and gestures that make you magnetic on screen\n\n" +
+    "--> **The Speed Launch System** -- design, produce, and promote your first course in a fraction of the time\n\n" +
+    "---\n\n" +
+    "You do not need to be the best in your field. You need to be 2-3 steps ahead of your student.\n\n" +
+    "[Watch the free Course Pro masterclass here](https://www.mindvalley.com/coursepro/masterclass)\n\n" +
+    "With love,\n\n" +
+    "**Vishen**\n\nFounder, Mindvalley\n\n" +
+    "P.S. Jimmy has 33,000+ five-star ratings. He started exactly where you are -- with knowledge, doubt, and a decision to make. In my next email, I will share the camera confidence technique and two students who went from paralyzed to published."
+},
+
+'mc-cp-2': {
+  subject: 'the camera confidence trick that works overnight (plus two course creators who proved it)',
+  preheader: 'Simple shifts in posture, tone, and gestures. Plus Deniz and Indrani who used Course Pro to launch.',
+  img: '',
+  schwartz: 'Solution-Aware',
+  cialdini: 'Authority + Social Proof',
+  cta: 'Watch the Free Masterclass \u2192',
+  url: 'https://www.mindvalley.com/coursepro/masterclass',
+  body:
+    "# The Camera Confidence Trick That Works Overnight\n\n" +
+    "Being good on camera is not a talent. It is a set of specific adjustments you can implement today.\n\n" +
+    "Jimmy Naraine teaches three shifts in the Course Pro masterclass that transform how you show up on screen:\n\n" +
+    "---\n\n" +
+    "**1. The Posture Reset**\n\n" +
+    "Most people slouch on camera without realizing it. This subconsciously signals low confidence. The fix: sit up straight, lean slightly forward (about 5 degrees), keep your shoulders back. This single adjustment changes how authoritative you appear.\n\n" +
+    "**2. The Tone Triangle**\n\n" +
+    "Monotone kills engagement. Jimmy teaches a triangular pattern -- authoritative statement, curious question, warm encouragement. This mimics natural conversation and keeps your audience hooked.\n\n" +
+    "**3. The Hand Gesture Rule**\n\n" +
+    "Keep your hands visible and use deliberate gestures to emphasize key points. Studies show speakers who use hand gestures are perceived as more trustworthy and more competent.\n\n" +
+    "---\n\n" +
+    "Camera confidence is not about becoming a different person. It is about removing the awkwardness that comes from not knowing what to do with your body. Once you have a specific physical protocol, your natural charisma emerges.\n\n" +
+    "Two people who learned this system and built real courses:\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/deniz-gunaydin.jpg\n**\"Course Pro teaches really great techniques and how to overcome fears. I finally published my first online course after struggling for 2 years.\"**\nDeniz Gunaydin, Management Consultant, Istanbul, Turkey\n\n" +
+    "{{STORY}}\nhttps://res.cloudinary.com/mindvalley/image/fetch/f_auto,q_auto,w_400,h_400,c_fill,dpr_1.7/https://storage.googleapis.com/mv-stories/indrani-idee.jpg\n**\"I learned how to shape my ideas into a real learning journey. My scattered animal-healing courses finally have structure and clarity.\"**\nIndrani, Animal Caregiver, Dehra Dun, India\n\n" +
+    "The masterclass is free. Jimmy and I walk you through the complete system.\n\n" +
+    "[Watch the free Course Pro masterclass now](https://www.mindvalley.com/coursepro/masterclass)\n\n" +
+    "To your first course,\n\n" +
+    "**Vishen**\n\nFounder, Mindvalley\n\n" +
+    "P.S. Tomorrow is the last call. If you have a course idea sitting in your head -- this masterclass turns it into a plan."
+},
+
+'mc-cp-3': {
+  subject: 'last call -- the course pro masterclass with jimmy naraine and vishen',
+  preheader: 'Free access closes tonight. From idea to published course in 30 days.',
+  img: '',
+  schwartz: 'Most-Aware',
+  cialdini: 'Reciprocity + Commitment',
+  cta: 'Watch Before It Closes \u2192',
+  url: 'https://www.mindvalley.com/coursepro/masterclass',
+  body:
+    "# Last Call -- Course Pro Masterclass\n\n" +
+    "This is the last email about the Course Pro masterclass.\n\n" +
+    "I want to be direct with you. Somewhere right now, someone with less expertise than you is building an online course. They are recording lessons. They are enrolling students. They are not smarter or more qualified. They simply started.\n\n" +
+    "The world does not need another expert who stays silent. It needs your perspective. Your experience. Your unique way of explaining things.\n\n" +
+    "---\n\n" +
+    "**In the masterclass you will learn:**\n\n" +
+    "--> **The mindset reset** that vaporizes \"I'm not ready\"\n\n" +
+    "--> **The Transformation Formula** for structuring your knowledge into a five-star course\n\n" +
+    "--> **Camera confidence overnight** -- posture, tone, and gesture shifts that work immediately\n\n" +
+    "--> **The Speed Launch System** -- idea to published course in 30 days\n\n" +
+    "---\n\n" +
+    "Jimmy has 350,000+ students and 33,000+ five-star ratings. He started with doubt and a decision. The system works.\n\n" +
+    "The masterclass is free. The time investment is 30 minutes. The potential upside is a business built around your knowledge.\n\n" +
+    "[Watch the free Course Pro masterclass before it closes tonight](https://www.mindvalley.com/coursepro/masterclass)\n\n" +
+    "Rooting for you,\n\n" +
+    "**Vishen**\n\nFounder, Mindvalley\n\n" +
+    "P.S. 30 days from now, you could have a published course. Not in theory. In practice. Press play."
 }
 
 });

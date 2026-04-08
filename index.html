@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speaking &amp; Authorship Collection &mdash; Full Email Journey</title>
+    <title>Speaking &amp; Authorship &mdash; Full Email Journey</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,18 +25,16 @@
             --gold: #d97706;
             --card-radius: 16px;
             --node-radius: 10px;
-            --7fc-color: #f97316;
-            --cp-color: #ef4444;
-            --si-color: #8b5cf6;
-            --se-color: #3b82f6;
+            --speak-color: #f97316;
+            --stage-color: #ec4899;
+            --creator-color: #8b5cf6;
+            --coursepro-color: #0ea5e9;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
             --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
             --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); min-height:100vh; color:var(--text-primary); overflow-x:hidden; }
-        .bg-layer { display:none; }
-        .orb { display:none; }
 
         .page-wrapper { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:48px 24px 80px; }
         .page-header { text-align:center; margin-bottom:48px; opacity:0; animation:fadeInDown 0.8s ease-out 0.2s forwards; }
@@ -49,7 +47,6 @@
         .stat-number { font-size:1.8rem; font-weight:700; line-height:1; margin-bottom:4px; }
         .stat-number.green { color:var(--green); }
         .stat-number.amber { color:var(--amber); }
-        .stat-number.muted { color:var(--text-muted); }
         .stat-number.white { color:var(--text-primary); }
         .stat-label { font-size:0.7rem; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); }
 
@@ -105,7 +102,7 @@
         .single-lane .email-nodes { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:10px; }
         .single-lane .email-node { max-width:none; }
 
-        /* ============ MODAL ============ */
+        /* MODAL */
         .modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.35); z-index:100; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); overflow-y:auto; animation:modalFadeIn 0.3s ease-out; }
         .modal-overlay.open { display:flex; justify-content:center; padding:40px 20px; }
         @keyframes modalFadeIn { from{opacity:0} to{opacity:1} }
@@ -124,44 +121,27 @@
         .modal-body { font-size:15px; color:#424245; line-height:1.65; }
         .modal-body p { margin-bottom:16px; }
         .modal-body strong { color:#1d1d1f; font-weight:600; }
-        /* Section dividers */
         .modal-body .section-divider { height:1px; background:linear-gradient(90deg,transparent,#d2d2d7,transparent); margin:28px 0; }
-        /* Bullet groups - highlight boxes */
         .modal-body .bullet-group { background:#f5f5f7; border-radius:12px; padding:20px 24px; margin:20px 0; }
         .modal-body .bullet-group-title { font-size:14px; font-weight:600; color:#c2410c; margin-bottom:14px; letter-spacing:0.2px; }
         .modal-body .arrow-item { padding-left:28px; position:relative; margin-bottom:10px; font-size:15px; line-height:1.6; }
         .modal-body .arrow-item:last-child { margin-bottom:0; }
         .modal-body .arrow-item::before { content:'\2192'; position:absolute; left:0; color:#c2410c; font-size:15px; font-weight:700; }
-        /* Testimonial blocks */
-        .modal-body .testimonial { background:#f5f5f7; border-left:3px solid #c2410c; border-radius:0 12px 12px 0; padding:20px 24px; margin:20px 0; font-style:italic; font-size:14px; line-height:1.7; color:#424245; }
+        .modal-body .testimonial { background:#f5f5f7; border-left:3px solid #f97316; border-radius:0 12px 12px 0; padding:20px 24px; margin:20px 0; font-style:italic; font-size:14px; line-height:1.7; color:#424245; }
         .modal-body .testimonial .testimonial-attr { font-style:normal; font-weight:600; color:#c2410c; margin-top:8px; font-size:13px; }
-        /* Story cards with photo */
-        .modal-body .story-card { display:flex; gap:16px; background:#f5f5f7; border-radius:12px; padding:20px 24px; margin:20px 0; align-items:flex-start; }
-        .modal-body .story-card img { width:88px; height:88px; border-radius:10px; object-fit:cover; flex-shrink:0; }
-        .modal-body .story-card-body { flex:1; min-width:0; }
-        .modal-body .story-card-quote { font-style:italic; font-size:14px; line-height:1.65; color:#424245; margin-bottom:10px; }
-        .modal-body .story-card-quote strong { font-style:italic; color:#1d1d1f; }
-        .modal-body .story-card-attr { font-weight:600; font-size:12px; color:#c2410c; letter-spacing:0.2px; }
-        /* Links */
         .modal-body a { color:#c2410c; text-decoration:none; font-weight:500; border-bottom:1px solid rgba(194,65,12,0.2); transition:border-color 0.2s; }
         .modal-body a:hover { border-bottom-color:#c2410c; }
-        /* Signature */
         .modal-body .email-sig { margin-top:28px; padding-top:20px; border-top:0.5px solid #d2d2d7; color:#86868b; font-size:14px; line-height:1.6; }
         .modal-body .email-sig strong { color:#1d1d1f; }
-        /* P.S. */
         .modal-body .email-ps { background:#fff8eb; border-radius:12px; padding:16px 20px; margin-top:24px; font-size:14px; line-height:1.6; color:#424245; }
         .modal-body .email-ps strong { color:#1d1d1f; }
-        /* Hero images */
         .modal-body .body-hero { width:calc(100% + 24px); margin-left:-12px; border-radius:16px; margin-top:20px; margin-bottom:24px; display:block; box-shadow:0 1px 3px rgba(0,0,0,0.04),0 8px 24px rgba(0,0,0,0.06); }
-        /* Inline CTA links styled as mini-buttons */
         .modal-body .inline-cta { display:inline-block; background:#fff7ed; color:#c2410c; font-weight:600; font-size:14px; padding:8px 16px; border-radius:100px; border:none; text-decoration:none; margin:4px 0; transition:background 0.2s; }
         .modal-body .inline-cta:hover { background:#fed7aa; border:none; }
-        /* CTA button */
         .modal-cta-wrap { margin-top:36px; text-align:center; }
         .modal-cta-btn { display:inline-block; padding:14px 36px; background:#f97316; color:#fff; font-weight:600; font-size:15px; border-radius:100px; text-decoration:none; transition:all 0.25s; letter-spacing:0.3px; }
         .modal-cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(249,115,22,0.25); background:#ea580c; }
 
-        /* ============ LEGEND ============ */
         .legend { display:flex; justify-content:center; gap:24px; margin-top:48px; padding-top:24px; border-top:1px solid var(--border); flex-wrap:wrap; }
         .legend-item { display:flex; align-items:center; gap:8px; font-size:0.72rem; color:var(--text-muted); }
         .legend-dot { width:8px; height:8px; border-radius:50%; }
@@ -189,8 +169,6 @@
             .modal-body .body-hero { width:calc(100% + 16px); margin-left:-8px; border-radius:12px; }
             .modal-body .bullet-group { padding:16px 18px; }
             .modal-body .testimonial { padding:16px 18px; }
-            .modal-body .story-card { flex-direction:column; align-items:center; text-align:center; padding:16px 18px; }
-            .modal-body .story-card img { width:72px; height:72px; }
         }
         @media (max-width:480px) {
             .stage-header { flex-wrap:wrap; gap:10px; }
@@ -200,29 +178,26 @@
     </style>
 </head>
 <body>
-    <div class="bg-layer"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-
     <div class="page-wrapper">
         <header class="page-header">
             <div class="logo-text">Mindvalley</div>
-            <h1>Speaking &amp; Authorship Collection<br>Email Journey</h1>
-            <p class="subtitle">The complete email funnel &mdash; 44 emails across 4 stages. Click any email to preview full copy, strategic frameworks &amp; CTAs.</p>
+            <h1>Speaking &amp; Authorship &mdash; Full Email Journey</h1>
+            <p class="subtitle">The complete email funnel &mdash; 44 emails across 4 stages and 4 funnels. Click any email node to preview full copy, frameworks &amp; CTAs.</p>
         </header>
 
         <div class="stats-bar">
             <div class="stat"><div class="stat-number white">44</div><div class="stat-label">Total Emails</div></div>
-            <div class="stat"><div class="stat-number muted">0</div><div class="stat-label">Live</div></div>
-            <div class="stat"><div class="stat-number" style="color:var(--accent-light)">44</div><div class="stat-label">Written</div></div>
-            <div class="stat"><div class="stat-number white">44</div><div class="stat-label">Viewable</div></div>
+            <div class="stat"><div class="stat-number green">0</div><div class="stat-label">Live</div></div>
+            <div class="stat"><div class="stat-number amber">0</div><div class="stat-label">In Progress</div></div>
+            <div class="stat"><div class="stat-number" style="color:var(--accent)">44</div><div class="stat-label">Written</div></div>
+            <div class="stat"><div class="stat-number white">4</div><div class="stat-label">Funnels</div></div>
         </div>
 
         <div class="funnel-bar">
             <div class="funnel-step" onclick="scrollToStage('stage-1')"><div class="funnel-step-bar" style="background:var(--accent)"></div><div class="funnel-step-label">Masterclass Invite</div></div>
-            <div class="funnel-step" onclick="scrollToStage('stage-2')"><div class="funnel-step-bar" style="background:var(--accent)"></div><div class="funnel-step-label">Program Onboarding</div></div>
-            <div class="funnel-step" onclick="scrollToStage('stage-3')"><div class="funnel-step-bar" style="background:var(--accent)"></div><div class="funnel-step-label">Collection Onboarding</div></div>
-            <div class="funnel-step" onclick="scrollToStage('stage-4')"><div class="funnel-step-bar" style="background:var(--accent)"></div><div class="funnel-step-label">Post-Onboarding Upsells</div></div>
+            <div class="funnel-step" onclick="scrollToStage('stage-2')"><div class="funnel-step-bar" style="background:var(--accent);opacity:0.7"></div><div class="funnel-step-label">Program Onboarding</div></div>
+            <div class="funnel-step" onclick="scrollToStage('stage-3')"><div class="funnel-step-bar" style="background:var(--amber)"></div><div class="funnel-step-label">Collection Onboarding</div></div>
+            <div class="funnel-step" onclick="scrollToStage('stage-4')"><div class="funnel-step-bar" style="background:var(--accent);opacity:0.5"></div><div class="funnel-step-label">Post-Onboarding Upsells</div></div>
         </div>
 
         <!-- STAGE 1: MASTERCLASS INVITE -->
@@ -234,35 +209,35 @@
             </div>
             <div class="swim-lanes">
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--7fc-color)"></div><div class="lane-name">7 Figure Creator &mdash; Social Media Mastery</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--speak-color)"></div><div class="lane-name">Speak and Inspire &mdash; Lisa Nichols</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('mc-7fc-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">John Lee&rsquo;s 0 &rarr; 6M Story</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-7fc-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">The 7-Figure Blueprint</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-7fc-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Watch Before It Ends</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-si-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Your Voice Matters</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-si-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Story-Showing + 2 Stories</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-si-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Last Chance</div></div>
                     </div>
                 </div>
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--cp-color)"></div><div class="lane-name">Course Pro &mdash; Create Your Online Course</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--stage-color)"></div><div class="lane-name">The Stage Effect &mdash; Eric Edmeades</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('mc-cp-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Goldman Sachs to 350K Students</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-cp-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">30-Day Course Creation System</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-cp-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Watch Before It Ends</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-se-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Command the Room</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-se-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">15-Second Hook + 2 Stories</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-se-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Last Chance</div></div>
                     </div>
                 </div>
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--si-color)"></div><div class="lane-name">Speak and Inspire &mdash; World-Class Speaking</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--creator-color)"></div><div class="lane-name">The 7-Figure Creator &mdash; John Lee</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('mc-si-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Lisa Nichols&rsquo; $11.42 Story</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-si-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">4 Secrets to Powerful Communication</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-si-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Watch Before It Ends</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cr-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Expertise to Business</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cr-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Monetization System + 2 Stories</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cr-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Last Chance</div></div>
                     </div>
                 </div>
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--se-color)"></div><div class="lane-name">Stage Effect &mdash; Master Speaker in 21 Days</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--coursepro-color)"></div><div class="lane-name">Course Pro &mdash; Jimmy Naraine &amp; Vishen</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('mc-se-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Homeless at 15 &rarr; Tony Robbins&rsquo; Stage</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-se-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">21-Day Transformation System</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
-                        <div class="email-node done" onclick="openEmail('mc-se-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Watch Before It Ends</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cp-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Courses People Finish</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cp-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Camera Confidence + 2 Stories</div><div class="node-cta">CTA: Watch Free Masterclass</div></div>
+                        <div class="email-node done" onclick="openEmail('mc-cp-3')"><div class="node-top"><span class="node-day">Email 3</span><span class="node-status done"></span></div><div class="node-name">Last Call</div><div class="node-cta">CTA: Last Chance</div></div>
                     </div>
                 </div>
             </div>
@@ -278,35 +253,35 @@
             </div>
             <div class="swim-lanes">
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--7fc-color)"></div><div class="lane-name">7 Figure Creator</div><span class="lane-status-summary done">Written</span></div>
-                    <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('ob-7fc-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-7fc-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Content System &gt; Content Creation</div><div class="node-cta">CTA: Start First Lesson</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-7fc-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">Compound Effect of Daily Practice</div><div class="node-cta">CTA: Continue Journey</div></div>
-                    </div>
-                </div>
-                <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--cp-color)"></div><div class="lane-name">Course Pro</div><span class="lane-status-summary done">Written</span></div>
-                    <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('ob-cp-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-cp-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Camera Confidence Overnight</div><div class="node-cta">CTA: Start First Lesson</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-cp-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">The Transformation Formula</div><div class="node-cta">CTA: Continue Journey</div></div>
-                    </div>
-                </div>
-                <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--si-color)"></div><div class="lane-name">Speak and Inspire</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--speak-color)"></div><div class="lane-name">Speak and Inspire</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
                         <div class="email-node done" onclick="openEmail('ob-si-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-si-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Mess to Message Framework</div><div class="node-cta">CTA: Start First Lesson</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-si-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">Daily Voice Practice Compounds</div><div class="node-cta">CTA: Continue Journey</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-si-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Mess to Message</div><div class="node-cta">CTA: Continue Lessons</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-si-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">The Compound</div><div class="node-cta">CTA: Continue Journey</div></div>
                     </div>
                 </div>
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--se-color)"></div><div class="lane-name">Stage Effect</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--stage-color)"></div><div class="lane-name">The Stage Effect</div><span class="lane-status-summary done">Written</span></div>
                     <div class="email-nodes">
                         <div class="email-node done" onclick="openEmail('ob-se-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-se-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">The 15-Second Hook</div><div class="node-cta">CTA: Continue Lessons</div></div>
-                        <div class="email-node done" onclick="openEmail('ob-se-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">Eliminate Stage Fright</div><div class="node-cta">CTA: Continue Journey</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-se-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">The Open Loop</div><div class="node-cta">CTA: Continue Lessons</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-se-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">Stage Fright Reframe</div><div class="node-cta">CTA: Continue Journey</div></div>
+                    </div>
+                </div>
+                <div class="swim-lane">
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--creator-color)"></div><div class="lane-name">The 7-Figure Creator</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="email-nodes">
+                        <div class="email-node done" onclick="openEmail('ob-cr-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-cr-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Content Pillars</div><div class="node-cta">CTA: Continue Lessons</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-cr-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">The Compound</div><div class="node-cta">CTA: Continue Journey</div></div>
+                    </div>
+                </div>
+                <div class="swim-lane">
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--coursepro-color)"></div><div class="lane-name">Course Pro</div><span class="lane-status-summary done">Written</span></div>
+                    <div class="email-nodes">
+                        <div class="email-node done" onclick="openEmail('ob-cp-1')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Welcome</div><div class="node-cta">CTA: Log In &amp; Start</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-cp-2')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Camera Confidence</div><div class="node-cta">CTA: Continue Lessons</div></div>
+                        <div class="email-node done" onclick="openEmail('ob-cp-3')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">Transformation Formula</div><div class="node-cta">CTA: Continue Journey</div></div>
                     </div>
                 </div>
             </div>
@@ -316,78 +291,80 @@
         <!-- STAGE 3: COLLECTION ONBOARDING -->
         <section class="stage" id="stage-3">
             <div class="stage-header">
-                <div class="stage-number" style="background:var(--accent-soft);color:var(--accent)">3</div>
+                <div class="stage-number" style="background:var(--amber-bg);color:var(--amber)">3</div>
                 <div class="stage-title">Collection Customer Onboarding</div>
                 <div class="stage-count">9 emails over 21 days</div>
             </div>
-            <div class="single-lane timeline-lane">
+            <div class="single-lane">
                 <div class="email-nodes">
-                    <div class="email-node done" onclick="openEmail('co-1')"><div class="node-top"><span class="node-day">Day 0</span><span class="node-status done"></span></div><div class="node-name">Welcome + Access</div><div class="node-cta">CTA: Log In &amp; Explore</div></div>
-                    <div class="email-node done" onclick="openEmail('co-2')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">App Download</div><div class="node-cta">CTA: Download App</div></div>
-                    <div class="email-node done" onclick="openEmail('co-3')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Choose Your Quest</div><div class="node-cta">CTA: Start Speak and Inspire</div></div>
-                    <div class="email-node done" onclick="openEmail('co-4')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">First Lesson (15 min)</div><div class="node-cta">CTA: Open App</div></div>
-                    <div class="email-node done" onclick="openEmail('co-5')"><div class="node-top"><span class="node-day">Day 5</span><span class="node-status done"></span></div><div class="node-name">4-Pillar Roadmap</div><div class="node-cta">CTA: Start Full Quest</div></div>
-                    <div class="email-node done" onclick="openEmail('co-6')"><div class="node-top"><span class="node-day">Day 7</span><span class="node-status done"></span></div><div class="node-name">Week 1 &mdash; What&rsquo;s Shifting?</div><div class="node-cta">CTA: Continue Quest</div></div>
-                    <div class="email-node done" onclick="openEmail('co-7')"><div class="node-top"><span class="node-day">Day 10</span><span class="node-status done"></span></div><div class="node-name">Program Combinations</div><div class="node-cta">CTA: Explore Tools</div></div>
-                    <div class="email-node done" onclick="openEmail('co-8')"><div class="node-top"><span class="node-day">Day 14</span><span class="node-status done"></span></div><div class="node-name">Social Proof Stories</div><div class="node-cta">CTA: Explore Collection</div></div>
-                    <div class="email-node done" onclick="openEmail('co-9')"><div class="node-top"><span class="node-day">Day 21</span><span class="node-status done"></span></div><div class="node-name">3-Week Checkpoint</div><div class="node-cta">CTA: Continue Journey</div></div>
+                    <div class="email-node done" onclick="openEmail('co-1')"><div class="node-top"><span class="node-day">Day 0</span><span class="node-status done"></span></div><div class="node-name">Welcome + First Step</div><div class="node-cta">CTA: Log In &amp; Explore</div></div>
+                    <div class="email-node done" onclick="openEmail('co-2')"><div class="node-top"><span class="node-day">Day 1</span><span class="node-status done"></span></div><div class="node-name">Download the App</div><div class="node-cta">CTA: Download App</div></div>
+                    <div class="email-node done" onclick="openEmail('co-3')"><div class="node-top"><span class="node-day">Day 2</span><span class="node-status done"></span></div><div class="node-name">Which Quest First?</div><div class="node-cta">CTA: Start Speak and Inspire</div></div>
+                    <div class="email-node done" onclick="openEmail('co-4')"><div class="node-top"><span class="node-day">Day 3</span><span class="node-status done"></span></div><div class="node-name">15 Minutes That Change Everything</div><div class="node-cta">CTA: Open App</div></div>
+                    <div class="email-node done" onclick="openEmail('co-5')"><div class="node-top"><span class="node-day">Day 5</span><span class="node-status done"></span></div><div class="node-name">The 4-Pillar Roadmap</div><div class="node-cta">CTA: Start Full Quest</div></div>
+                    <div class="email-node done" onclick="openEmail('co-6')"><div class="node-top"><span class="node-day">Day 7</span><span class="node-status done"></span></div><div class="node-name">Week 1 Check-In</div><div class="node-cta">CTA: Continue Quest</div></div>
+                    <div class="email-node done" onclick="openEmail('co-7')"><div class="node-top"><span class="node-day">Day 10</span><span class="node-status done"></span></div><div class="node-name">The Multiplier Effect</div><div class="node-cta">CTA: Explore Tools</div></div>
+                    <div class="email-node done" onclick="openEmail('co-8')"><div class="node-top"><span class="node-day">Day 14</span><span class="node-status done"></span></div><div class="node-name">3 Transformation Stories</div><div class="node-cta">CTA: Explore Collection</div></div>
+                    <div class="email-node done" onclick="openEmail('co-9')"><div class="node-top"><span class="node-day">Day 21</span><span class="node-status done"></span></div><div class="node-name">21 Days &mdash; The Identity Shift</div><div class="node-cta">CTA: Continue Journey</div></div>
                 </div>
             </div>
         </section>
         <div class="stage-connector" style="animation-delay:1.2s"></div>
 
-        <!-- STAGE 4: POST-ONBOARDING UPSELL EMAILS (11 emails, story-driven) -->
+        <!-- STAGE 4: POST-ONBOARDING UPSELLS -->
         <section class="stage" id="stage-4">
             <div class="stage-header">
                 <div class="stage-number" style="background:var(--accent-soft);color:var(--accent)">4</div>
                 <div class="stage-title">Post-Onboarding Upsell Emails</div>
-                <div class="stage-count">11 emails &middot; 3 lanes, story-driven</div>
+                <div class="stage-count">11 emails &middot; 3 lanes</div>
             </div>
             <div class="swim-lanes">
                 <!-- Lane 1: Single Program Customers — 3 test variants -->
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--7fc-color)"></div><div class="lane-name">From Single Program Customers</div><span class="lane-status-summary done">3 test variants</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--speak-color)"></div><div class="lane-name">From Single Program Customers</div><span class="lane-status-summary done">3 test variants</span></div>
                     <div class="email-nodes">
                         <div class="email-node done" onclick="openEmail('sale-sp-col')"><div class="node-top"><span class="node-day">Test A</span><span class="node-status done"></span></div><div class="node-name">The Incomplete System</div><div class="node-cta">CTA: Explore the Collection</div></div>
-                        <div class="email-node done" onclick="openEmail('sale-sp-mem')"><div class="node-top"><span class="node-day">Test B</span><span class="node-status done"></span></div><div class="node-name">The Weakest Link</div><div class="node-cta">CTA: Explore Membership</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-sp-mem')"><div class="node-top"><span class="node-day">Test B</span><span class="node-status done"></span></div><div class="node-name">The Weakest Dimension</div><div class="node-cta">CTA: Explore Membership</div></div>
                         <div class="email-node done" onclick="openEmail('sale-sp-both')"><div class="node-top"><span class="node-day">Test C</span><span class="node-status done"></span></div><div class="node-name">Two Doors</div><div class="node-cta">CTA: Choose Your Path</div></div>
                     </div>
                 </div>
                 <!-- Lane 2: Collection Customers — 4 emails (2 sub-rows) -->
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--si-color)"></div><div class="lane-name">From Collection Customers</div><span class="lane-status-summary done">4 written</span></div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--creator-color)"></div><div class="lane-name">From Collection Customers</div><span class="lane-status-summary done">4 written</span></div>
                     <div style="font-size:0.68rem;font-weight:600;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Yearly &rarr; Membership ($500/yr)</div>
                     <div class="email-nodes" style="margin-bottom:14px;">
                         <div class="email-node done" onclick="openEmail('sale-col-mem-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">The Paradox</div><div class="node-cta">CTA: Explore Membership</div></div>
-                        <div class="email-node done" onclick="openEmail('sale-col-mem-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Private Invitation</div><div class="node-cta">CTA: Accept Your Invitation</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-col-mem-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">The Mirror</div><div class="node-cta">CTA: Accept Invitation</div></div>
                     </div>
                     <div style="font-size:0.68rem;font-weight:600;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Monthly &rarr; Yearly Billing ($299/yr vs $49/mo)</div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('sale-col-yr-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">The Commitment Frequency</div><div class="node-cta">CTA: Switch to Yearly</div></div>
-                        <div class="email-node done" onclick="openEmail('sale-col-yr-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Rate Lock Window</div><div class="node-cta">CTA: Lock Your Rate</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-col-yr-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">The Commitment Signal</div><div class="node-cta">CTA: Switch to Yearly</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-col-yr-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Billing Note</div><div class="node-cta">CTA: Lock Your Rate</div></div>
                     </div>
                 </div>
                 <!-- Lane 3: Full Membership Customers — 4 emails (2 sub-rows) -->
                 <div class="swim-lane">
-                    <div class="lane-header"><div class="lane-dot" style="background:var(--se-color)"></div><div class="lane-name">From Full Membership Customers</div><span class="lane-status-summary done">4 written</span></div>
-                    <div style="font-size:0.68rem;font-weight:600;color:#ef4444;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Yearly &rarr; Accelerator ($999) &bull; RED PRIORITY</div>
+                    <div class="lane-header"><div class="lane-dot" style="background:var(--coursepro-color)"></div><div class="lane-name">From Full Membership Customers</div><span class="lane-status-summary done">4 written</span></div>
+                    <div style="font-size:0.68rem;font-weight:600;color:#ef4444;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Yearly &rarr; AI Clone Accelerator &bull; RED PRIORITY</div>
                     <div class="email-nodes" style="margin-bottom:14px;">
-                        <div class="email-node done" style="border-left:3px solid #ef4444" onclick="openEmail('sale-fm-accel-1')"><div class="node-top"><span class="node-day" style="color:#ef4444">Email 1 &bull; RED</span><span class="node-status done" style="background:#ef4444"></span></div><div class="node-name">The Knowing-Doing Gap</div><div class="node-cta">CTA: Join the Accelerator</div></div>
-                        <div class="email-node done" style="border-left:3px solid #ef4444" onclick="openEmail('sale-fm-accel-2')"><div class="node-top"><span class="node-day" style="color:#ef4444">Email 2 &bull; RED</span><span class="node-status done" style="background:#ef4444"></span></div><div class="node-name">Limited Seats &mdash; Members Only</div><div class="node-cta">CTA: Claim Your Seat</div></div>
+                        <div class="email-node done" style="border-left:3px solid #ef4444" onclick="openEmail('sale-fm-accel-1')"><div class="node-top"><span class="node-day" style="color:#ef4444">Email 1 &bull; RED</span><span class="node-status done" style="background:#ef4444"></span></div><div class="node-name">The Gap Between Knowing and Becoming</div><div class="node-cta">CTA: Learn About the Accelerator</div></div>
+                        <div class="email-node done" style="border-left:3px solid #ef4444" onclick="openEmail('sale-fm-accel-2')"><div class="node-top"><span class="node-day" style="color:#ef4444">Email 2 &bull; RED</span><span class="node-status done" style="background:#ef4444"></span></div><div class="node-name">Members-Only Early Access</div><div class="node-cta">CTA: Claim Your Seat</div></div>
                     </div>
                     <div style="font-size:0.68rem;font-weight:600;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Monthly &rarr; Yearly Billing ($500/yr vs $X/mo)</div>
                     <div class="email-nodes">
-                        <div class="email-node done" onclick="openEmail('sale-fm-yr-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Compounding Commitment</div><div class="node-cta">CTA: Switch to Annual</div></div>
-                        <div class="email-node done" onclick="openEmail('sale-fm-yr-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Your Rate Lock Window</div><div class="node-cta">CTA: Lock Your Rate</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-fm-yr-1')"><div class="node-top"><span class="node-day">Email 1</span><span class="node-status done"></span></div><div class="node-name">Commitment &amp; Results</div><div class="node-cta">CTA: Switch to Annual</div></div>
+                        <div class="email-node done" onclick="openEmail('sale-fm-yr-2')"><div class="node-top"><span class="node-day">Email 2</span><span class="node-status done"></span></div><div class="node-name">Billing Note</div><div class="node-cta">CTA: Lock Your Rate</div></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <div class="legend">
+            <div class="legend-item"><div class="legend-dot live"></div> Live</div>
+            <div class="legend-item"><div class="legend-dot in-progress"></div> In Implementation</div>
             <div class="legend-item"><div class="legend-dot done"></div> Written (click to preview)</div>
         </div>
-        <p class="footer-note">Speaking &amp; Authorship Collection Email Journey &middot; Last updated Mar 2026</p>
+        <p class="footer-note">Speaking &amp; Authorship Email Journey &middot; Last updated Apr 2026 &middot; Click any node to preview full email</p>
     </div>
 
     <!-- EMAIL MODAL -->
@@ -405,17 +382,10 @@
                 <div id="modal-body" class="modal-body"></div>
                 <div class="modal-cta-wrap">
                     <a id="modal-cta" class="modal-cta-btn" href="" target="_blank"></a>
-                    <a id="modal-cta-2" class="modal-cta-btn" href="" target="_blank" style="display:none;margin-top:12px;background:#1d1d1f;"></a>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- LOAD EMAIL DATA -->
-    <script src="emails-stage1.js"></script>
-    <script src="emails-stage2.js"></script>
-    <script src="emails-stage3.js"></script>
-    <script src="emails-stage4.js"></script>
 
     <script>
     function scrollToStage(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
@@ -430,22 +400,23 @@
             return s;
         }
         function isArrow(s){return s.trim().startsWith('-->');}
-        function isSig(s){return /^(To your|With deep|With love|With gratitude|With respect|Rooting|Proud|Welcome to)/.test(s);}
+        function isSig(s){return /^(To your|With deep|With love|Rooting|Proud|Welcome to|Here's to|Keep)/.test(s);}
         function isTestimonial(s){
             var t=s.trim();
             return (t.startsWith('**"')||t.startsWith('"')) && (t.includes('--')||t.includes('\u2014'));
         }
         while(i<blocks.length){
             var p=blocks[i];
-            /* --- Section divider --- */
             if(p.trim()==='---'){html+='<div class="section-divider"></div>';i++;continue;}
-            /* Image */
+            if(p.trim().startsWith('# ')){
+                html+='<h1 style="font-family:Playfair Display,serif;font-size:1.6rem;font-weight:700;line-height:1.3;margin-bottom:8px">'+md(p.trim().slice(2))+'</h1>';
+                i++;continue;
+            }
             if(p.trim().startsWith('![')){
                 var m=p.trim().match(/!\[([^\]]*)\]\(([^)]+)\)/);
                 if(m)html+='<img class="body-hero" src="'+m[2]+'" alt="'+m[1]+'">';
                 i++;continue;
             }
-            /* Collect consecutive arrow blocks into a highlight box */
             if(isArrow(p)||(p.includes('\n-->'))){
                 html+='<div class="bullet-group">';
                 while(i<blocks.length){
@@ -467,7 +438,6 @@
                 html+='</div>';
                 continue;
             }
-            /* Testimonial */
             if(isTestimonial(p)){
                 var parts=p.split(/\s--\s|\s\u2014\s/);
                 var quote=md(parts[0]);
@@ -475,21 +445,24 @@
                 html+='<div class="testimonial">'+quote+(attr?'<div class="testimonial-attr">\u2014 '+md(attr)+'</div>':'')+'</div>';
                 i++;continue;
             }
-            /* Story card with photo */
             if(p.trim().startsWith('{{STORY}}')){
-                var sLines=p.split('\n');
-                var sPhoto=sLines[1]||'';
-                var sQuote=sLines[2]||'';
-                var sAttr=sLines[3]||'';
-                html+='<div class="story-card"><img src="'+sPhoto.trim()+'" alt="'+sAttr.trim()+'"><div class="story-card-body"><div class="story-card-quote">'+md(sQuote)+'</div><div class="story-card-attr">'+md(sAttr)+'</div></div></div>';
+                var lines=p.trim().split('\n');
+                var imgUrl=lines[1]||'';
+                var quote=lines[2]||'';
+                var attr=lines[3]||'';
+                quote=md(quote);
+                attr=md(attr);
+                html+='<div class="story-card" style="background:#f8f9fc;border-radius:12px;padding:20px;margin:16px 0;display:flex;gap:16px;align-items:flex-start">';
+                if(imgUrl){html+='<img src="'+imgUrl+'" alt="Story" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0">';}
+                html+='<div>';
+                if(quote){html+='<div style="font-size:0.95rem;line-height:1.6;margin-bottom:6px">'+quote+'</div>';}
+                if(attr){html+='<div style="font-size:0.8rem;color:#64748b">'+attr+'</div>';}
+                html+='</div></div>';
                 i++;continue;
             }
-            /* P.S. */
             if(p.startsWith('P.S.')){html+='<div class="email-ps">'+md(p)+'</div>';i++;continue;}
-            /* Signature */
             if(isSig(p)){html+='<div class="email-sig">'+md(p)+'</div>';i++;continue;}
-            if(p.startsWith('[Signature]')){html+='<div class="email-sig"><strong>Vishen Lakhiani</strong><br>Founder, Mindvalley</div>';i++;continue;}
-            /* Regular paragraph */
+            if(p.startsWith('[Signature]')){html+='<div class="email-sig"><strong>The Mindvalley Team</strong></div>';i++;continue;}
             html+='<p>'+md(p)+'</p>';
             i++;
         }
@@ -503,7 +476,6 @@
         document.getElementById('badge-cialdini').textContent=e.cialdini;
         document.getElementById('modal-subject').textContent=e.subject;
         document.getElementById('modal-preheader').textContent=e.preheader;
-        /* Inject hero image INSIDE the body after the first paragraph */
         var bodyHtml=renderBody(e.body);
         var firstBreak=bodyHtml.indexOf('</p>');
         if(firstBreak>-1 && e.img){
@@ -514,9 +486,6 @@
         var btn=document.getElementById('modal-cta');
         btn.textContent=e.cta;
         btn.href=e.url;
-        var btn2=document.getElementById('modal-cta-2');
-        if(e.cta2){btn2.textContent=e.cta2;btn2.href=e.url2;btn2.style.display='inline-block';}
-        else{btn2.style.display='none';}
         document.getElementById('email-modal').classList.add('open');
         document.body.style.overflow='hidden';
     }
@@ -527,6 +496,13 @@
     }
 
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+
+    /* EMAIL DATA - loaded from external files */
+    window.EMAIL_DATA = {};
     </script>
+    <script src="emails-stage1.js"></script>
+    <script src="emails-stage2.js"></script>
+    <script src="emails-stage3.js"></script>
+    <script src="emails-stage4.js"></script>
 </body>
 </html>
